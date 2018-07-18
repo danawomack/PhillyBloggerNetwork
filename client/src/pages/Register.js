@@ -24,7 +24,7 @@ class Register extends Component {
                 password: this.state.password
             })
             .then(res => {
-                this.props.history.push("/")
+                this.props.history.push("/posts")
             })
             .catch(err => console.log(err));
         }
@@ -33,7 +33,7 @@ class Register extends Component {
     render() {
         return (
             <div className="container">
-                <h1>Register Page</h1>
+                <h1>Philly Blogger Network</h1>
                 <p className="lead">Please enter your credentials below.</p>
                 <form action="/register" method="post" style={{ 'maxWidth': '300px' }}>
                     <div className="form-group">
