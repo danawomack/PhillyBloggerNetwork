@@ -58,7 +58,8 @@ class Posts extends Component {
 
   render() {
     return (
-      <Container fluid>
+      // <Container fluid>
+      <div>
         <Row>
           <Col size="md-6">
             <Jumbotron>
@@ -113,7 +114,8 @@ class Posts extends Component {
             )}
           </Col>
         </Row>
-      </Container>
+      </div>  
+      // </Container>
     );
   }
 }
