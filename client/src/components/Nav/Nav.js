@@ -6,6 +6,7 @@ const Nav = () => (
     <a className="brand-logo center" href="/posts">
       Philly Blogger Network
     </a>
+       
   </nav>
 );
 

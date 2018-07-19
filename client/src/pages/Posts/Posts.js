@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -58,14 +57,16 @@ class Posts extends Component {
 
   render() {
     return (
-      <div class="container">
+      <div className="container">
 
-        <div class="col s12 m6">
+        <div className="col s12 m6">
           <Row>
+            <p>Create your listing below </p>
             <Col size="md-6">
               {/* <Jumbotron>
                 <h1>Philly Blogger Network</h1>
               </Jumbotron> */}
+
               <form>
                 <Input
                   value={this.state.title}
@@ -95,7 +96,7 @@ class Posts extends Component {
             </Col>
             <Col size="md-6 sm-12">
              
-                <h3>Find what you're looking for below</h3>
+                <p>Find what you're looking for below</p>
              
               {this.state.posts.length ? (
                 <div class="row" >

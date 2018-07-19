@@ -37,7 +37,7 @@ class Home extends Component {
         return (
         
         <div className="container">
-            <h1>Philly Blogger Network</h1>
+            <h2>Where Bloggers Connect</h2>
             { this.state.user ? (
                 <div>
                     <p>You are currently logged in as { this.state.user.username }</p>
