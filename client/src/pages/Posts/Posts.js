@@ -58,64 +58,73 @@ class Posts extends Component {
 
   render() {
     return (
-      // <Container fluid>
-      <div>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
-              <h1>Philly Blogger Network</h1>
-            </Jumbotron>
-            <form>
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.body}
-                onChange={this.handleInputChange}
-                name="body"
-                placeholder="Body (required)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Post
+      <div class="container">
+
+        <div class="col s12 m6">
+          <Row>
+            <Col size="md-6">
+              {/* <Jumbotron>
+                <h1>Philly Blogger Network</h1>
+              </Jumbotron> */}
+              <form>
+                <Input
+                  value={this.state.title}
+                  onChange={this.handleInputChange}
+                  name="title"
+                  placeholder="Title (required)"
+                />
+                <Input
+                  value={this.state.author}
+                  onChange={this.handleInputChange}
+                  name="author"
+                  placeholder="Author (required)"
+                />
+                <TextArea
+                  value={this.state.body}
+                  onChange={this.handleInputChange}
+                  name="body"
+                  placeholder="Body (required)"
+                />
+                <FormBtn
+                  disabled={!(this.state.author && this.state.title)}
+                  onClick={this.handleFormSubmit}
+                >
+                  Submit Post
               </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Posts</h1>
-            </Jumbotron>
-            {this.state.posts.length ? (
-              <List>
-                {this.state.posts.map(post => (
-                  <ListItem key={post._id}>
-                    <Link to={"/posts/" + post._id}>
-                      <strong>
-                        {post.title} by {post.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deletePost(post._id)} />
-                  </ListItem>
+              </form>
+            </Col>
+            <Col size="md-6 sm-12">
+             
+                <h3>Find what you're looking for below</h3>
+             
+              {this.state.posts.length ? (
+                <div class="row" >
+                 {this.state.posts.map(post => (
+                <div class="col s12 m6" key={post._id}>
+                
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title"><Link to={"/posts/" + post._id}>
+                        <strong>
+                          {post.title} by {post.author}
+                        </strong>
+                      </Link>
+                      <DeleteBtn onClick={() => this.deletePost(post._id)} />
+                      </span>
+                      
+                    </div>
+                   
+                  </div>
+                </div>
                 ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col>
-        </Row>
-      </div>  
-      // </Container>
+              </div>
+              ) : (
+                  <h3>No Results to Display</h3>
+                )}
+            </Col>
+          </Row>
+        </div>
+      </div>
     );
   }
 }

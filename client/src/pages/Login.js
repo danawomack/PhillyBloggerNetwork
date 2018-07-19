@@ -30,22 +30,14 @@ class Login extends Component {
             })
             .catch(err => console.log(err));
 
-            /*
-            API.saveBook({
-                title: this.state.title,
-                author: this.state.author,
-                synopsis: this.state.synopsis
-            })
-                .then(res => this.loadBooks())
-                .catch(err => console.log(err));
-            */
+            
         }
     };
 
     render() {
         return (
             <div className="container">
-                <h1>Login Page</h1>
+                <h2>Login to connect</h2>
                 <p className="lead">Please enter your credentials below.</p>
                 <form action="/login" method="post" style={ {'maxWidth': '300px'} }>
                     <div className="form-group">

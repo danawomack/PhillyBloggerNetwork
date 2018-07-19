@@ -1,16 +1,5 @@
-// import React from "react";
-
-// const Nav = () => (
-//   <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-//     <a className="navbar-brand" href="/">
-//       Philly Blogger Network
-//     </a>
-//   </nav>
-// );
-
-// export default Nav;
-
 import React from "react";
+import "./Nav.css";
 
 const Nav = () => (
   <nav className="nav-wrapper">

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
 
+
+
 class Home extends Component {
     
     state = {
@@ -33,6 +35,7 @@ class Home extends Component {
 
     render() {
         return (
+        
         <div className="container">
             <h1>Philly Blogger Network</h1>
             { this.state.user ? (
@@ -47,6 +50,7 @@ class Home extends Component {
                     <a className="btn btn-default btn-primary" href="/register">Register</a>
                 </div>
             )}
+      
         </div>
         );
     }

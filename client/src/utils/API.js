@@ -1,14 +1,14 @@
 import axios from "axios";
 
 export default {
-    // Gets all books
+    // Gets all posts
     getUser: function () {
         return axios.get("/auth/check");
     },
     loginUser: function (loginData) {
         return axios.post("/auth/login/", loginData);
     },
-    // Saves a book to the database
+    // Saves a posts to the database
     registerUser: function (registerData) {
         return axios.post("/auth/register", registerData);
     },

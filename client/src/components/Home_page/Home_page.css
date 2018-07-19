@@ -1,0 +1,9 @@
+/* .home {
+  float: right;
+  color: #e74944;
+  https://www.lifewire.com/thmb/UmkxpdNLYHtHy7xpYLHNaU9BuMQ=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/484065417-56a9f7523df78cf772abca36.jpg
+} */
+
+body {
+  background-image:url("https://www.lifewire.com/thmb/UmkxpdNLYHtHy7xpYLHNaU9BuMQ=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/484065417-56a9f7523df78cf772abca36.jpg");
+}

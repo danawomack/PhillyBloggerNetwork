@@ -18,28 +18,32 @@ class Detail extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-              <h1>
+      <div class="container">
+        {/* <Row>
+              <h3>
                 {this.state.post.title} by {this.state.post.author}
-              </h1>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Body</h1>
-              <p>
-                {this.state.post.body}
-              </p>
-            </article>
-          </Col>
-        </Row>
+              </h3>
+        </Row> */}
+
+        <div class="row">
+    <div class="col s12 m12">
+      <div class="card white darken-1">
+        <div class="card-content black-text">
+          <span class="card-title"> {this.state.post.title} by {this.state.post.author} </span>
+          <p> {this.state.post.body}</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+       
         <Row>
           <Col size="md-2">
             <Link to="/posts">← Back to Posts</Link>
           </Col>
         </Row>
-      </Container>
+    </div>
     );
   }
 }
